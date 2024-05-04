@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import "../styles/globals.css"; // Assuming your global styles are in a file named "globals.css"
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="stylesheet" href={inter.cssHref} />
         <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <meta name="survey description for spiders" content={metadata.description} />
       </Head>
-      <div className={inter.className}>{children}</div>
+      <html className={inter.className}>{children}</html>
     </>
   );
 }
