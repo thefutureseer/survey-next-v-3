@@ -1,5 +1,5 @@
-// Import the getresults function from the "@lib/mongo/movie" module
-import { getresults } from "@lib/mongo/results";
+// Import the getresults 
+import { addResults, getresults } from "@lib/mongo/operations";
 
 // Define an asynchronous request handler function
 const handler = async (req, res) => {
@@ -18,11 +18,23 @@ const handler = async (req, res) => {
       // If an error occurred during processing, send an error response with status 500
       return res.status(500).json({ error: error.message });
     }
-  }
+  } else if (req.method === 'POST'){
+   try {
 
-  // If the request method is not GET, set the allowed methods header and send status 425
-  res.setHeader('Allow', ['GET']);
-  res.status(425).end(`Method ${req.method} is not allowed. `)
+     //set variable to json string to add to db
+     const newResult = req.body;
+     //add  to results database
+     const { success, result, error } = await addResults(newResult);
+     if (error) throw new Error(error);
+     return res.status(201).json({success: result});
+     
+    } catch(error) {
+      res.status(500).json({error: error.message});
+    }
+  } else {
+    res.setHeader('Allow', ['GET', 'POST']);
+    res.status(405).end(`Method: ${req.method} is not allowed`);
+  }
 }
 
 // Export the request handler function

@@ -18,7 +18,7 @@ const SurveyContainer = () => {
   const survey = new Model(surveyJson);
 
   // Add an event handler for when the survey is completed
-  survey.onComplete.add(function (sender, options) {
+  survey.onComplete.add(async function (sender, options) {
     // Display the "Saving..." message (pass a string value to display a custom message)
     options.showSaveInProgress();
     options.showSaveSuccess();
@@ -26,13 +26,33 @@ const SurveyContainer = () => {
         // options.clearSaveMessages();
 
     
-    // Log the sent survey results to the console
+    // Log the finished sent survey results to the console
+    const finishedSurvey = sender.data;
     console.log(" survey results", sender.data);
+
+// Send the finished survey data to the backend API
+try {
+  const response = await fetch('/api/results', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(finishedSurvey),
   });
+
+  if (response.ok) {
+    console.log('Survey results saved successfully');
+  } else {
+    console.error('Failed to save survey results', response.statusText);
+  }
+} catch (error) {
+  console.error('Error saving survey results', error);
+}
+});
 
   // Render the Survey component with the survey model
   return <Survey model={survey}/>
 }
 
 // Export the SurveyContainer component
-export default SurveyContainer
+export default SurveyContainer;
