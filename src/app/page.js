@@ -1,6 +1,6 @@
 // import styles from "./page.module.css";
 import SurveyContainer from "./components/surveyContainer";
-import Link from 'next/Link';
+import Link from 'next/link';
 
 export default function Home() {
   return (
