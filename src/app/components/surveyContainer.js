@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 // Import survey styles
 import 'survey-core/defaultV2.min.css';

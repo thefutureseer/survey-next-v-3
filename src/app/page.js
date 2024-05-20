@@ -1,14 +1,15 @@
-// import styles from "./page.module.css";
-import SurveyContainer from "./components/surveyContainer";
 import Link from 'next/link';
+import SurveyContainer from "./components/surveyContainer";
+import ResultsButtonClient from '@components/ResultsButtonClient';
 
 export default function Home() {
   return (
-   <body>
-    <Link href="/api/results">
+   <div>
+    <ResultsButtonClient/>
+    {/* <Link href="/api/results">
       <button>See all results</button>
-    </Link>
+    </Link> */}
     <SurveyContainer />
-   </body> 
+   </div> 
   );
-}
+};

@@ -1,5 +1,5 @@
 // Import the getresults 
-import { addResults, getresults } from "@lib/mongo/operations";
+import { addResults, getresults } from "@/lib/mongo/operations";
 
 // Define an asynchronous request handler function
 const handler = async (req, res) => {

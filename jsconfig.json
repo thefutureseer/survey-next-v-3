@@ -5,9 +5,9 @@
     // Defines path mappings for module names
     "paths": {
       // Maps any module starting with "@components/" to the "components/" directory
-      "@components/*": ["components/*"],
+      "@components/*": ["src/app/components/*"],
       // Maps any module starting with "@lib/" to the "lib/" directory
-      "@lib/*": ["lib/*"],
+      "@lib/*": ["src/lib/*"],
       // Maps any module starting with "@public/" to the "public/" directory
       "@public/*": ["public/*"],
       // Maps any module starting with "@/"" to the "src/" directory

@@ -1,4 +1,4 @@
-import { getResultsCollection } from '@lib/mongo/results';
+import { getResultsCollection } from '@/lib/mongo/results';
 
 // Function to retrieve results from the database
 export async function getresults() {
