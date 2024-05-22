@@ -1,17 +1,4 @@
-/* other text elements as needed */
-.sv-container-modern .sv-header__title, 
-.sv-container-modern .sv-header__description,
-.sv-container-modern .sv-question__title,
-.sv-container-modern .sv-question__description,
+/* text elements as needed */
 .sv-string-viewer {
   color: gold; /* Change font color to gold */
-}
-
-/* survey.css */
-.sv-container-modern .sv-body, 
-.sv-container-modern .sv-header__title, 
-.sv-container-modern .sv-header__description,
-.sv-container-modern .sv-question__title,
-.sv-container-modern .sv-question__description {
-  color: gold !important; /* Add !important to ensure the style is applied */
-}
+};

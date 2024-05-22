@@ -1,5 +1,5 @@
 const surveyJson = {
- "title": "Lets do a quick survey",
+ "title": "Survey for deeper results",
  "logoPosition": "right",
  "pages": [
   {
@@ -7,7 +7,7 @@ const surveyJson = {
    "elements": [
     {
      "type": "checkbox",
-     "name": "question1",
+     "name": "Q1 Check whichever",
      "choices": [
       "Item 1",
       "Item 2",
@@ -19,7 +19,7 @@ const surveyJson = {
     },
     {
      "type": "radiogroup",
-     "name": "question2",
+     "name": "Q2 Check one",
      "choices": [
       "Item 1",
       "Item 2",
@@ -30,34 +30,34 @@ const surveyJson = {
     },
     {
      "type": "ranking",
-     "name": "question3 (rearrange if necessary)",
+     "name": "Q3 Rank",
      "choices": [
-      "Item 1 goes here",
-      "Item 2 goes here",
-      "Item 3 goes here"
+      "Item 1 goes here. ",
+      "Item 2 goes here. ",
+      "Item 3 goes here. "
      ]
     },
     {
      "type": "rating",
-     "name": "question4 (choose one)"
+     "name": "Q4 Rating"
     },
     {
      "type": "tagbox",
-     "name": "question5 (add and order)",
+     "name": "Q5 Add/delete, order your answer",
      "choices": [
-      "Item 1",
-      "Item 2",
-      "Item 3"
+      "Item 1. ",
+      "Item 2. ",
+      "Item 3. "
      ]
     }
    ]
   },
   {
-   "name": "page2 (True or False)",
+   "name": "page2",
    "elements": [
     {
      "type": "boolean",
-     "name": "question6"
+     "name": "Q6 True or False"
     }
    ]
   }

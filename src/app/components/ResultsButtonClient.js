@@ -1,15 +1,31 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const ResultsButtonClient = () => {
   const router = useRouter();
+  const [isResultsPage, setIsResultsPage] = useState(false);
+
+  // Check the current path on initial render
+  useEffect(() => {
+    if (window.location.pathname === '/results') {
+      setIsResultsPage(true);
+    } else {
+      setIsResultsPage(false);
+    }
+  }, []);
+
   const handleClick = () => {
-    router.push('/results');
+    if (isResultsPage) {
+      router.push('/');
+    } else {
+      router.push('/results');
+    }
   };
 
   return (
     <button onClick={handleClick}>
-      See results page
+      {isResultsPage ? 'Survey' : 'Results'}
     </button>
   );
 };

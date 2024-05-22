@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import ResultsList from '@/app/components/ResultsList';
+import ResultsButtonClient from '@components/ResultsButtonClient';
 
 const ResultsPage = () => {
   // State to keep track of results, loading, and errors
@@ -35,6 +36,7 @@ const ResultsPage = () => {
 
   return (
     <div>
+      <ResultsButtonClient/>
       <h1>Companies / Everyday users / Entertainers</h1>
       <ResultsList results={results} />
     </div>
