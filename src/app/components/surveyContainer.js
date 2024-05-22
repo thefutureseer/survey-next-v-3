@@ -2,6 +2,7 @@
 
 // Import survey styles
 import 'survey-core/defaultV2.min.css';
+import '../../styles/survey.css'
 
 // Import Survey component from survey-react-ui library
 import { Survey } from 'survey-react-ui';
@@ -24,6 +25,11 @@ const SurveyContainer = () => {
     options.showSaveSuccess();
         // Alternatively, you can clear all messages:
         // options.clearSaveMessages();
+
+        //set css
+        survey.css = {
+
+        }
 
     
     // Log the finished sent survey results to the console

@@ -19,7 +19,7 @@ const ResultsList = ({ results }) => {
               //and make each line a different color
               Object.entries(result).map(([key, value], i)=>(
                 <div key={i} style={{color: colors[i%colors.length]}}>
-                  <strong>Q:{key}</strong>{" "} A: {value}
+                  <strong>{'\n'} Q:{key}</strong>{" " }{'\n'}  A: {value}
                 </div>
               ))}</pre>
           </li>

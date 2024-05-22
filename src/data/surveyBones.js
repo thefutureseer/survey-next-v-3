@@ -1,5 +1,5 @@
 const surveyJson = {
- "title": "survey everything ",
+ "title": "Lets do a quick survey",
  "logoPosition": "right",
  "pages": [
   {
@@ -30,21 +30,22 @@ const surveyJson = {
     },
     {
      "type": "ranking",
-     "name": "question3",
+     "name": "question3 (rearrange if necessary)",
      "choices": [
-      "Item 1",
-      "Item 2",
-      "Item 3"
+      "Item 1 goes here",
+      "Item 2 goes here",
+      "Item 3 goes here"
      ]
     },
     {
      "type": "rating",
-     "name": "question4"
+     "name": "question4 (choose one)"
     },
     {
      "type": "tagbox",
-     "name": "question5",
+     "name": "question5 (add and order)",
      "choices": [
+      "Item 1",
       "Item 2",
       "Item 3"
      ]
@@ -52,7 +53,7 @@ const surveyJson = {
    ]
   },
   {
-   "name": "page2",
+   "name": "page2 (True or False)",
    "elements": [
     {
      "type": "boolean",

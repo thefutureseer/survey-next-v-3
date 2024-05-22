@@ -35,7 +35,7 @@ const ResultsPage = () => {
 
   return (
     <div>
-      <h1>Company Survey</h1>
+      <h1>Companies / Everyday users / Entertainers</h1>
       <ResultsList results={results} />
     </div>
   );

@@ -1,22 +1,20 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import '../styles/survey.css'; // Import the survey.css file
 
 export const metadata = {
-  title: "Survey Next App",
-  description: "Surveys for company",
+  title: "Dans survey software",
+  description: "Surveys for you",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="eng">
       <Head>
-        <link rel="stylesheet" href={inter.cssHref} />
+        <link rel="stylesheet"  />
         <title>{metadata.title}</title>
-        <meta name="survey description for spiders" content={metadata.description} />
+        <meta name="survey description for meta data" content={metadata.description} />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

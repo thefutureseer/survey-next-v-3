@@ -6,9 +6,6 @@ export default function Home() {
   return (
    <div>
     <ResultsButtonClient/>
-    {/* <Link href="/api/results">
-      <button>See all results</button>
-    </Link> */}
     <SurveyContainer />
    </div> 
   );
