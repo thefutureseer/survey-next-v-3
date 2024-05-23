@@ -26,12 +26,6 @@ const SurveyContainer = () => {
         // Alternatively, you can clear all messages:
         // options.clearSaveMessages();
 
-        //set css
-        survey.css = {
-
-        }
-
-    
     // Log the finished sent survey results to the console
     const finishedSurvey = sender.data;
     console.log(" survey results", sender.data);
