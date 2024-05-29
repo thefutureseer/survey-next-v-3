@@ -2,7 +2,6 @@ const { MongoClient } = require('mongodb');
 const dotenv = require( 'dotenv');
 dotenv.config();
 const {mongoSurveyDB} = process.env;
-console.log(" HERES THE MONGOSURVEY URI: ", mongoSurveyDB);
 const uri = mongoSurveyDB;
 const options = {};
 if (!uri) throw new Error('Add uri!');

@@ -1,39 +1,50 @@
+import '../styles/survey.css';
+import ClientRoot from "./ClientRoot";
 
-import Head from "next/head";
-import '../styles/survey.css'; // Import the survey.css file
 export const metadata = {
   title: "Dans survey software",
   description: "Surveys for you",
+  icons: {
+    icon: [
+      { rel: "apple-touch-icon", sizes: "180x180", url: "/apple-touch-icon.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", url: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
+      { rel: "manifest", url: "/site.webmanifest" },
+      { rel: "manifest", url: "/manifest.json" },
+    ],
+    maskIcon: { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#5bbad5" },
+  },
+  msapplicationTileColor: "#da532c",
+  httpEquiv: {
+    "X-UA-Compatible": "IE=edge"
+  }
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+};
+
+export const themeColor = "#ffffff";
+
+export const formatDetection = {
+  telephone: "no",
 };
 
 export default function RootLayout({ children }) {
+
   return (
-    <html lang="eng">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href='/site.webmanifest' />
-        <link rel="manifest" href='/manifest.json' />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-
+    <html lang="en">
+      <head>
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="survey description for meta data" content={metadata.description} />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="format-detection" content="telephone=no" />
-
-        <title>{metadata.title}</title>
-
-        <script>
-          var meta = document.createElement('meta');
-          meta.name = 'theme-color';
-          meta.content = '#ffffff';
-          document.getElementsByTagName('head')[0].appendChild(meta);
-        </script>
-      </Head>
-      <body>{children}</body>
+        <title>Dans survey software</title>
+      </head>
+      <body>
+        <ClientRoot>
+         {children}
+        </ClientRoot>
+      </body>
     </html>
   );
 };
