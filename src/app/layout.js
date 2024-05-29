@@ -2,8 +2,7 @@ import '../styles/survey.css';
 import ClientRoot from "./ClientRoot";
 
 export const metadata = {
-  title: "Dans survey software",
-  description: "Surveys for you",
+  description: "A survey for you",
   icons: {
     icon: [
       { rel: "apple-touch-icon", sizes: "180x180", url: "/apple-touch-icon.png" },
@@ -38,7 +37,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <title>Dans survey software</title>
       </head>
       <body>
         <ClientRoot>

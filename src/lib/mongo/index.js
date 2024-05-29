@@ -10,7 +10,6 @@ let clientConnectPromise;
 if (process.env.NODE_ENV !== 'production') {
   if (!global._mongoClientPromise) {
     global._mongoClientPromise = client.connect();
-    console.log("connected to mongo?")
   }
   clientConnectPromise = global._mongoClientPromise;
 } else {
