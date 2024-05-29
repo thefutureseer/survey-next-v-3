@@ -1,14 +1,3 @@
-/* text elements as needed */
 .sv-string-viewer {
-  color: gold; /* Change font color to gold */
+  color: gold;
 };
-
-/* .sd-title.sd-container-modern__title {
-  display: flex;
-  align-items: center;
-  padding: var(--sd-page-vertical-padding) var(--sd-page-vertical-padding);
-  overflow: auto;
-  font-family: var(--sjs-font-family, var(--font-family, var(--sjs-default-font-family)));
-  gap: calc(4*(var(--sjs-base-unit, var(--base-unit, 8px))));
-  box-shadow: 0px 2px 0px var(--sjs-primary-backcolor, var(--primary, #ff0606)) !important;
-}; */

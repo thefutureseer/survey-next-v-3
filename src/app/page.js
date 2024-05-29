@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import SurveyContainer from "./components/surveyContainer";
 import ResultsButtonClient from '@components/ResultsButtonClient';
 
