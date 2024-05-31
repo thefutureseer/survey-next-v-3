@@ -33,7 +33,7 @@ const surveyJson = {
         },
         {
           "type": "text",
-          "name": "favorite Toy",
+          "name": "favorite Toy / game",
           "title": "What was your favorite childhood toy or game?"
         },
         {
@@ -89,14 +89,6 @@ const surveyJson = {
           "type":"text",
           "naem":"mystics?",
           "title": "From 1-1000 rate how much you like psychics and fortune tellers"},
-        {
-          "type": "radiogroup",
-          "name": "Love?",
-          "title": "Do you love me or do you love me?",
-          "choices": ["Yes!", "No!","Don't joke about love!, All of the above"],
-          "hasOther": true,
-          "otherText": "Other (please specify)"
-        },
         {
           "type":"choices",
           "name":"Did this survey work for me?",
