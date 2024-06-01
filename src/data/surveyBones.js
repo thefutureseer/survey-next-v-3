@@ -66,7 +66,9 @@ const surveyJson = {
           "type": "radiogroup",
           "name": "pet Preference",
           "title": "Are you a cat person or a dog person?",
-          "choices": ["Cat", "Dog"]
+          "choices": ["Cat", "Dog"],
+          "hasOther": true,
+          "otherText": "Other (please specify)"
         },
         {
           "type": "text",
@@ -76,7 +78,8 @@ const surveyJson = {
         {
           "type":"boolean",
           "name":"religion",
-          "title": "Have you ever been to one of those really lively, colorful events, like a Krishna festival, where a very traditional Catholic might raise an eyebrow and call it 'devil worship'? They're actually pretty fascinating!"},
+          "title": "Have you ever been to one of those really lively, colorful events, like a Krishna festival, where a very traditional Catholic might raise an eyebrow and call it 'devil worship'? They're actually pretty fascinating!"
+        },
         {
           "type": "radiogroup",
           "name": "Dating Preference re:Persistence",
@@ -87,16 +90,9 @@ const surveyJson = {
         },
         {
           "type":"text",
-          "naem":"mystics?",
-          "title": "From 1-1000 rate how much you like psychics and fortune tellers"},
-        {
-          "type":"choices",
-          "name":"Did this survey work for me?",
-          "title":"Did this survey work for Daniel?",
-          "choices":["Yes, No, Too early to ask"],
-          "hasOther": true,
-          "otherText": "Other (please specify)"
-        },
+          "name":"mystics?",
+          "title": "From 1-1000 rate how much you like psychics and fortune tellers"
+        }
       ]
     }
   ]
