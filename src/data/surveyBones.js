@@ -12,59 +12,59 @@ const surveyJson = {
         },
         {
           "type": "comment",
-          "name": "team Performance",
+          "name": "teamPerformance",
           "title": "How well did our team do in yesterday’s game?"
         },
         {
           "type": "text",
-          "name": "support Team",
+          "name": "teamSupporterOf",
           "title": "Which sports team do you support?"
         },
         {
           "type": "boolean",
-          "name": "vampire HighSchool",
+          "name": "vampireHighSchool",
           "title": "If you were a vampire, would you attend high school for the rest of your life?",
           "label": "Yes"
         },
         {
           "type": "comment",
-          "name": "forget a Memory",
+          "name": "forgetAMemory",
           "title": "Which of your childhood memories would you like to forget?"
         },
         {
           "type": "text",
-          "name": "favorite Toy / game",
+          "name": "favoriteToyOrGame",
           "title": "What was your favorite childhood toy or game?"
         },
         {
           "type": "text",
-          "name": "comfort Food",
+          "name": "comfortFood",
           "title": "What's your favorite comfort food?"
         },
         {
           "type": "radiogroup",
-          "name": "snack Preference",
+          "name": "snackPreference",
           "title": "Do you prefer sweet or savory snacks?",
           "choices": ["Sweet", "Savory"]
         },
         {
           "type": "text",
-          "name": "dream Destination",
+          "name": "dreamDestination",
           "title": "What's your dream travel destination?"
         },
         {
           "type": "comment",
-          "name": "memorable Travel",
+          "name": "memorableTravel",
           "title": "Share a memorable travel experience you've had."
         },
         {
           "type":"text",
-          "name": "Camping anyone?",
+          "name": "campingAnyone?",
           "title": "On a scale from 1-1000 how much do you like camping?"
         },
         {
           "type": "radiogroup",
-          "name": "pet Preference",
+          "name": "petPreference",
           "title": "Are you a cat person or a dog person?",
           "choices": ["Cat", "Dog"],
           "hasOther": true,
@@ -72,7 +72,7 @@ const surveyJson = {
         },
         {
           "type": "text",
-          "name": "reincarnation Animal",
+          "name": "reincarnationAnimal",
           "title": "If reincarnation were real, what animal would you like to come back as?"
         },
         {
@@ -82,7 +82,7 @@ const surveyJson = {
         },
         {
           "type": "radiogroup",
-          "name": "Dating Preference re:Persistence",
+          "name": "DatingPreferenceRe:Persistence",
           "title": "Have you ever had that persistent person who is always trying to catch a date with you while you are single and ready to mingle?",
           "choices": ["All the time", "Once", "That one time doesn't count"],
           "hasOther": true,
