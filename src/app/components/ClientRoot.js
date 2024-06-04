@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import '../styles/survey.css';
+import '../../styles/survey.css';
 
 export default function ClientRoot({ children }) {
   useEffect(() => {

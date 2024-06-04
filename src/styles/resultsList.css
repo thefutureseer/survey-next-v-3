@@ -1,14 +1,25 @@
-h1{
+h1 {
   text-align: center;
 }
-h3{
+h3 {
   margin-left: -2.16em;
 }
-ul{
+ul {
   text-align: -webkit-center;
   background: black;
 }
-li{
+li {
   width: 94%;
   list-style-type: none;
+}
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
 }

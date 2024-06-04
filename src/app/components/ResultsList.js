@@ -5,15 +5,15 @@ import countIdKeys from './CountUsers';
 
 const ResultsList = ({ results }) => {
   const result = results;
-  // console.log(JSON.stringify(result));
   if (!results || results.length === 0) return <p>No results found.</p>;
   const headCount = countIdKeys(JSON.stringify(results));
   const colors = ['red', 'yellow', '#4FFFB0', 'blue',  'purple', 'orange', 'magenta'];
   return (
     <div>
-      <h2>Total Survey Results</h2>
-      <p>Surveys taken: {headCount}</p>
-      <ul>
+     <h2>Total Survey Results</h2>
+     <p>Surveys taken: {headCount}</p>
+     <div className='list-container'>
+      <ul className='list'>
         {results.map((result, index) => (
           <li key={result._id}> <h3 style={{color: colors[index % colors.length], borderTop: '4px solid gold', background:"#0087ff" }}>{index}</h3>
             <pre>{
@@ -31,6 +31,7 @@ const ResultsList = ({ results }) => {
           </li>
         ))}
       </ul>
+     </div>
     </div>
   );
 };
