@@ -12,14 +12,13 @@ li {
   width: 94%;
   list-style-type: none;
 }
-.list-container {
+.list-container  {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
-.list {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-}
+.color-red { color: rgb(255, 207, 48); }
+.color-yellow { color: yellow; }
+.color-green { color: #4FFFB0; }
+.color-blue { color: blue; }
+.color-purple { color: rgb(178, 94, 252); }
+.color-orange { color: orange; }
+.color-magenta { color: rgb(255, 77, 0); }

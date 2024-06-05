@@ -82,7 +82,7 @@ const surveyJson = {
         },
         {
           "type": "radiogroup",
-          "name": "DatingPreferenceRe:Persistence",
+          "name": "DatingPreference",
           "title": "Have you ever had that persistent person who is always trying to catch a date with you while you are single and ready to mingle?",
           "choices": ["All the time", "Once", "That one time doesn't count"],
           "hasOther": true,

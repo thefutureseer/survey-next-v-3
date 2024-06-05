@@ -7,18 +7,23 @@ const ResultsList = ({ results }) => {
   const result = results;
   if (!results || results.length === 0) return <p>No results found.</p>;
   const headCount = countIdKeys(JSON.stringify(results));
-  const colors = ['red', 'yellow', '#4FFFB0', 'blue',  'purple', 'orange', 'magenta'];
+
+  function getColorClass(index){
+    const colorClasses = ['color-red', 'color-yellow', 'color-green', 'color-blue',  'color-purple', 'color-orange', 'color-magenta'];
+    return colorClasses[index % colorClasses.length]
+  };
+  
   return (
     <div>
      <h2>Total Survey Results</h2>
      <p>Surveys taken: {headCount}</p>
      <div className='list-container'>
-      <ul className='list'>
+      <ul>
         {results.map((result, index) => (
-          <li key={result._id}> <h3 style={{color: colors[index % colors.length], borderTop: '4px solid gold', background:"#0087ff" }}>{index}</h3>
+          <li key={result._id}> <h3 className={getColorClass(index)} style={{borderTop: '4px solid gold', background:"#0087ff" }}>{index}</h3>
             <pre>{
               Object.entries(result).map(([key, value], i)=>(
-                <div key={i} style={{display:'flex', color:colors[i % colors.length]}}>
+                <div className={`li-div-1 ${getColorClass(i)}`} key={i}>
                   {'\n'} 
                   <p >
                    Q:{key.replace(/-/g, ' ')}{" " }{'\n'} 
