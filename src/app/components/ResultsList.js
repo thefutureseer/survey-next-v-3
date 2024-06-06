@@ -6,7 +6,7 @@ import countIdKeys from './CountUsers';
 const ResultsList = ({ results }) => {
   const result = results;
   if (!results || results.length === 0) return <p>No results found.</p>;
-  const headCount = countIdKeys(JSON.stringify(results));
+  const {idCount, majorityVote} = countIdKeys(JSON.stringify(results));
 
   function getColorClass(index){
     const colorClasses = ['color-red', 'color-yellow', 'color-green', 'color-blue',  'color-purple', 'color-orange', 'color-magenta'];
@@ -14,9 +14,7 @@ const ResultsList = ({ results }) => {
   };
   
   return (
-    <div>
-     <h2>Total Survey Results</h2>
-     <p>Surveys taken: {headCount}</p>
+    <div style={{display:"flex"}}>
      <div className='list-container'>
       <ul>
         {results.map((result, index) => (
@@ -37,6 +35,11 @@ const ResultsList = ({ results }) => {
         ))}
       </ul>
      </div>
+      <div style={{margin: '3px'}}>
+      <h2>Total Survey Results</h2>
+      <p>Surveys taken: {idCount}</p>
+      <p >Majority vote example: {majorityVote}</p>
+      </div>
     </div>
   );
 };
