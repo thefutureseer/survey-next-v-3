@@ -3,9 +3,9 @@ import 'survey-core/defaultV2.min.css';
 import '../../styles/survey.css';
 import { Survey } from 'survey-react-ui';
 import { Model } from "survey-core";
-import surveyJson from "../../data/surveyBones";
+import voteJson from "../../data/voteScript";
 const SurveyContainer = () => {
-  const survey = new Model(surveyJson);
+  const survey = new Model(voteJson);
   survey.onComplete.add(async function (sender, options) {
     options.showSaveInProgress();
     options.showSaveSuccess();
@@ -19,12 +19,12 @@ try {
     body: JSON.stringify(finishedSurvey),
   });
   if (response.ok) {
-    console.log('Survey results saved successfully');
+    console.log('Vote results saved successfully');
   } else {
-    console.error('Failed to save survey results', response.statusText);
+    console.error('Failed to save vote results', response.statusText);
   }
 } catch (error) {
-  console.error('Error saving survey results', error);
+  console.error('Error saving poll results', error);
 };
 });
   return <Survey model={survey}/>

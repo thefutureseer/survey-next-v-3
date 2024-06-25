@@ -1,5 +1,5 @@
 {
-  "name": "survey-next-v-3",
+  "name": "myvote",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,5 +25,20 @@
     "babel-jest": "^29.7.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3"
-  }
+  },
+  "description": "Lets vote on it.",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thefutureseer/myVote.git"
+  },
+  "keywords": [
+    "vote"
+  ],
+  "author": "Daniel thefutureishere Tannehill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thefutureseer/myVote/issues"
+  },
+  "homepage": "https://github.com/thefutureseer/myVote#readme"
 }

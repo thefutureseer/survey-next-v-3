@@ -3,8 +3,8 @@ import '../styles/survey.css';
 import ClientRoot from './components/ClientRoot';
 
 export const metadata = {
-  title: 'Dan Surveys',
-  description: 'A survey for you',
+  title: 'Dan votes',
+  description: 'A poll for you',
   icons: {
     icon: [
       { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
