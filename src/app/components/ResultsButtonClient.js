@@ -26,7 +26,7 @@ const ResultsButtonClient = () => {
 
   return (
     <button onClick={handleClick}>
-      {isResultsPage ? 'Poll' : 'Results'}
+      {isResultsPage ? 'Survey' : 'Results'}
     </button>
   );
 };

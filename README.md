@@ -1,1 +1,1 @@
-Lets vote on it.
+Make surveys and see the statistics
