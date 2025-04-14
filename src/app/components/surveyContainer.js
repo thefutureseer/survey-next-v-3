@@ -1,15 +1,20 @@
 'use client';
-import 'survey-core/defaultV2.min.css';
-import '../../styles/survey.css';
-import { Survey } from 'survey-react-ui';
 import { Model } from "survey-core";
+import 'survey-core/defaultV2.min.css';
+import { Survey } from 'survey-react-ui';
+import '../../styles/survey.css';
 import surveyJson from "../../data/surveyBones";
+import dynamic from 'next/dynamic';
+
+
 const SurveyContainer = () => {
+  
   const survey = new Model(surveyJson);
   survey.onComplete.add(async function (sender, options) {
     options.showSaveInProgress();
     options.showSaveSuccess();
     const finishedSurvey = sender.data;
+    alert(JSON.stringify(finishedSurvey))
 try {
   const response = await fetch('/api/results', {
     method: 'POST',
@@ -29,4 +34,6 @@ try {
 });
   return <Survey model={survey}/>
 };
-export default SurveyContainer;
+
+// Dynamically import SurveyContainer with SSR disabled
+export default dynamic(() => Promise.resolve(SurveyContainer), { ssr: false });
