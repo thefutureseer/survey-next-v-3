@@ -1,11 +1,11 @@
 'use client';
 
-import UnServiceWorkerRegister from './service-worker';
+import ServiceWorkerRegister from './service-worker';
 
 export default function ClientRoot({ children }) {
   return (
     <>
-      <UnServiceWorkerRegister />
+      <ServiceWorkerRegister />
       {children}
     </>
   );
