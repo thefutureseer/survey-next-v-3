@@ -1,5 +1,5 @@
-import '../styles/survey.css';
-import ClientRoot from './components/ClientRoot';
+import '@styles/survey.css';
+import ClientRoot from '@components/ui/ClientRoot';
 
 export const metadata = {
   title: 'Dan Surveys',

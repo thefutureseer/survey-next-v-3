@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import ResultsList from '@/app/components/ResultsList';
-import ResultsButtonClient from '@components/ResultsButtonClient';
+import ResultsList from '@components/survey/ResultsList';
+import ResultsButtonClient from '@components/survey/ResultsButtonClient';
 const ResultsPage = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);

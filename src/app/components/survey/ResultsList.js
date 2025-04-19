@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import '../../styles/resultsList.css';
+import '@styles/resultsList.css';
 import countIdKeys from './CountUsers';
 
 const ResultsList = ({ results }) => {

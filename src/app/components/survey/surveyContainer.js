@@ -2,9 +2,10 @@
 import { Model } from "survey-core";
 import 'survey-core/defaultV2.min.css';
 import { Survey } from 'survey-react-ui';
-import '../../styles/survey.css';
-import surveyJson from "../../data/surveyBones";
+import '@styles/survey.css';
+import surveyJson from "../../../data/surveyBones";
 import dynamic from 'next/dynamic';
+import InstallButton from "@components/common/InstallButton";
 
 
 const SurveyContainer = () => {
@@ -32,7 +33,14 @@ try {
   console.error('Error saving survey results', error);
 };
 });
-  return <Survey model={survey}/>
+  return (
+   <div>
+    <div className="install-btn-container">
+     <InstallButton />
+    </div>
+    <Survey model={survey}/>
+   </div>
+   )
 };
 
 // Dynamically import SurveyContainer with SSR disabled
