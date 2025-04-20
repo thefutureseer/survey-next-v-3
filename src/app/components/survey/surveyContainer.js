@@ -5,7 +5,6 @@ import { Survey } from 'survey-react-ui';
 import '@styles/survey.css';
 import surveyJson from "../../../data/surveyBones";
 import dynamic from 'next/dynamic';
-import InstallButton from "@components/common/InstallButton";
 
 
 const SurveyContainer = () => {
@@ -35,9 +34,6 @@ try {
 });
   return (
    <div>
-    <div className="install-btn-container">
-     <InstallButton />
-    </div>
     <Survey model={survey}/>
    </div>
    )
