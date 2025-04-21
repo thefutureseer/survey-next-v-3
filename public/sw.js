@@ -4,10 +4,6 @@ const URLS_TO_CACHE = [
   '/results', // survey results page
   '/styles/survey.css', // external CSS file
   '/offline.html', // fallback page
-  '/favicon-32x32.png',
-  '/favicon-16x16.png',
-  '/android-chrome-192x192.png',
-  '/android-chrome-256x256.png',
   '/survey-core/defaultV2.min.css',
   '/survey-react-ui.js',
 ];
