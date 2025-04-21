@@ -6,6 +6,7 @@ const URLS_TO_CACHE = [
   '/offline.html', // fallback page
   '/survey-core/defaultV2.min.css',
   '/survey-react-ui.js',
+  '/fallback-image.png'
 ];
 
 // STEP 1: Install and cache static files
