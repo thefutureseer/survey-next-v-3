@@ -7,91 +7,89 @@ const surveyJson = {
       "elements": [
         {
           "type": "text",
-          "name": "respondentName",
-          "title": "What is your name or code name for this survey?"
+          "name": "cuteName ",
+          "title": "What is you favorite honey name that I call you?"
         },
         {
           "type": "comment",
-          "name": "teamPerformance",
-          "title": "How well did our team do in yesterday’s game?"
+          "name": "onMind ",
+          "title": "Is there anything youd like to discuss before taking this survey?"
         },
         {
           "type": "text",
-          "name": "teamSupporterOf",
-          "title": "Which sports team do you support?"
+          "name": "teams ",
+          "title": "What are your favorite sports teams?"
         },
         {
           "type": "boolean",
-          "name": "vampireHighSchool",
-          "title": "If you were a vampire, would you attend high school for the rest of your life?",
+          "name": "fairies ",
+          "title": "Do you believe in fairies?",
           "label": "Yes"
         },
         {
           "type": "comment",
-          "name": "forgetAMemory",
+          "name": "forgetAMemory ",
           "title": "Which of your childhood memories would you like to forget?"
         },
         {
           "type": "text",
-          "name": "favoriteToyOrGame",
+          "name": "favoriteToyOrGame ",
           "title": "What was your favorite childhood toy or game?"
         },
         {
           "type": "text",
-          "name": "comfortFood",
-          "title": "What's your favorite comfort food?"
+          "name": "comfortFood ",
+          "title": "What's your favorite comfort food? Please list top 5"
         },
         {
           "type": "radiogroup",
-          "name": "snackPreference",
-          "title": "Do you prefer sweet or savory snacks?",
-          "choices": ["Sweet", "Savory"]
+          "name": "snackPreference ",
+          "title": "I know you like Savory but when do you like sweet?",
+          "choices": ["Day", "Night"]
         },
         {
           "type": "text",
-          "name": "dreamDestination",
-          "title": "What's your dream travel destination?"
+          "name": "endOfLifeDestination ",
+          "title": "If you had 3 months to live but could do anything you want who would you spend it with?"
         },
         {
           "type": "comment",
-          "name": "memorableTravel",
+          "name": "memorableTravel ",
           "title": "Share a memorable travel experience you've had."
         },
         {
           "type":"text",
-          "name": "campingAnyone?",
-          "title": "On a scale from 1-1000 how much do you like camping?"
+          "name": "exercise ",
+          "title": "On a scale from 1-1000 how much do you know about exercise and nutrition?"
         },
         {
-          "type": "radiogroup",
-          "name": "petPreference",
-          "title": "Are you a cat person or a dog person?",
-          "choices": ["Cat", "Dog"],
-          "hasOther": true,
-          "otherText": "Other (please specify)"
+          "type": "comment",
+          "name": "exoticPetPreference ",
+          "title": "If you could have any exotic pet what would it be?",
         },
         {
           "type": "text",
-          "name": "reincarnationAnimal",
-          "title": "If reincarnation were real, what animal would you like to come back as?"
+          "name": "spiritAnimal",
+          "title": "Do you know what your spirit animal is?"
         },
         {
           "type":"boolean",
           "name":"religion",
-          "title": "Have you ever been to one of those really lively, colorful events, like a Krishna festival, where a very traditional Catholic might raise an eyebrow and call it 'devil worship'? They're actually pretty fascinating!"
+          "title": "Have you ever been to an ISKON temple?",
+          "label": "Yes"
         },
         {
           "type": "radiogroup",
           "name": "DatingPreference",
-          "title": "Have you ever had that persistent person who is always trying to catch a date with you while you are single and ready to mingle?",
-          "choices": ["All the time", "Once", "That one time doesn't count"],
+          "title": "(Preference/ money is no object) How often would you like to eat at expensive restaurants?",
+          "choices": ["All the time (Most days per week)", "Once a week", "a few times a month", "Never"],
           "hasOther": true,
           "otherText": "Other (please specify)"
         },
         {
           "type":"text",
           "name":"mystics?",
-          "title": "From 1-1000 rate how much you like psychics and fortune tellers"
+          "title": "From 1-1000 rate how much you like fortune tellers"
         }
       ]
     }

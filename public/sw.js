@@ -1,11 +1,8 @@
-const CACHE_NAME = 'survey-cache-v4';
+const CACHE_NAME = 'survey-cache-v5';
 const URLS_TO_CACHE = [
-  '/', // homepage
-  '/results', // survey results page
-  '/styles/survey.css', // external CSS file
-  '/offline.html', // fallback page
-  '/survey-core/defaultV2.min.css',
-  '/survey-react-ui.js',
+  '/',                 // homepage
+  '/results',          // survey results page
+  '/offline.html',     // fallback page
   '/fallback-image.png'
 ];
 
@@ -13,11 +10,9 @@ const URLS_TO_CACHE = [
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Installed');
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(URLS_TO_CACHE);
-    })
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(URLS_TO_CACHE))
   );
-  self.skipWaiting(); // Activate the new service worker immediately
+  self.skipWaiting();
 });
 
 // STEP 2: Remove old caches
@@ -26,56 +21,42 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            console.log('Service Worker: Removing old cache', key);
-            return caches.delete(key);
-          }
-        })
+        keys.map((key) => key !== CACHE_NAME && caches.delete(key))
       )
     )
   );
-  self.clients.claim(); // Allows the new service worker to control open pages
+  self.clients.claim();
 });
 
-// STEP 3: Respond to network requests
+// STEP 3: Fetch handler
 self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    // Handle navigation requests
+  const { request } = event;
+
+  // Navigation requests (pages)
+  if (request.mode === 'navigate') {
     event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        return cachedResponse || fetch(event.request).catch(() =>
-          caches.match('/offline.html')
-        );
-      })
+      caches.match(request).then((cached) => cached || fetch(request).catch(() => caches.match('/offline.html')))
     );
-  } else if (event.request.destination === 'image') {
-    // Handle image requests with a fallback
+    return;
+  }
+
+  // API requests - runtime caching
+  if (request.url.includes('/api/')) {
     event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        return cachedResponse || fetch(event.request).catch(() =>
-          caches.match('/fallback-image.png') // Add a fallback image to the cache
-        );
-      })
-    );
-  } else if (event.request.url.includes('/api/')) {
-    // Handle API requests with runtime caching
-    event.respondWith(
-      caches.open('runtime-cache').then((cache) => {
-        return fetch(event.request)
+      caches.open('runtime-cache').then((cache) =>
+        fetch(request)
           .then((response) => {
-            cache.put(event.request, response.clone());
+            cache.put(request, response.clone());
             return response;
           })
-          .catch(() => caches.match(event.request));
-      })
+          .catch(() => caches.match(request))
+      )
     );
-  } else {
-    // Handle other requests
-    event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        return cachedResponse || fetch(event.request);
-      })
-    );
+    return;
   }
+
+  // Other requests (images, fonts, etc.) - cache first
+  event.respondWith(
+    caches.match(request).then((cached) => cached || fetch(request))
+  );
 });

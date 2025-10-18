@@ -1,0 +1,84 @@
+/* survey.css */
+
+/* === Background & text === */
+.sd-root-modern {
+  background: linear-gradient(to bottom right, #f3e8ff, #e0f2fe);
+  color: #3b0764;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* === Survey Title (top of survey) === */
+.sd-title,
+.sd-header__text,
+.sv-title {
+  font-family: 'Poppins', sans-serif;
+  color: #7e22ce;
+  text-shadow: 0 2px 8px rgba(126, 34, 206, 0.2);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* === Page title (for multi-page surveys) === */
+.sd-page__title,
+.sd-page__title--modern {
+  border-bottom: 2px solid #c084fc;
+  margin-bottom: 10px;
+  color: #6d28d9;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* === Buttons === */
+.sd-btn,
+.sv-btn {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease;
+}
+
+/* Main Action Buttons (Next/Submit) */
+.sd-btn--action,
+.sv-btn--action,
+.sv-completedpage__restart-btn,
+.sv-navigation__complete-btn {
+  background-color: #8b5cf6 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.sd-btn--action:hover,
+.sv-btn--action:hover,
+.sv-navigation__complete-btn:hover {
+  background-color: #7c3aed !important;
+}
+
+/* === Radio buttons and checkboxes === */
+.sv-radio__decorator,
+.sv-checkbox__decorator {
+  border-color: #8b5cf6 !important;
+}
+
+.sv-radio--checked .sv-radio__decorator,
+.sv-checkbox--checked .sv-checkbox__decorator {
+  background-color: #8b5cf6 !important;
+  border-color: #7c3aed !important;
+}
+
+/* === Input focus / highlights === */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #a855f7 !important;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2) !important;
+}
+
+/* === Center survey contents === */
+.sd-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

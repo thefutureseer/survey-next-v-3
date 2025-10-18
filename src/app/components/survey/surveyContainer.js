@@ -2,7 +2,6 @@
 import { Model } from "survey-core";
 import 'survey-core/defaultV2.min.css';
 import { Survey } from 'survey-react-ui';
-import '@styles/survey.css';
 import surveyJson from "../../../data/surveyBones";
 import dynamic from 'next/dynamic';
 
@@ -10,9 +9,9 @@ import dynamic from 'next/dynamic';
 const SurveyContainer = () => {
   
   const survey = new Model(surveyJson);
+
   survey.onComplete.add(async function (sender, options) {
     options.showSaveInProgress();
-    options.showSaveSuccess();
     const finishedSurvey = sender.data;
     alert(JSON.stringify(finishedSurvey))
 try {
@@ -25,11 +24,16 @@ try {
   });
   if (response.ok) {
     console.log('Survey results saved successfully');
+    options.showSaveSuccess();
+
   } else {
     console.error('Failed to save survey results', response.statusText);
+    options.showSaveError();
   }
 } catch (error) {
   console.error('Error saving survey results', error);
+  options.showSaveError();
+
 };
 });
   return (
