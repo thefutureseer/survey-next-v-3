@@ -1,6 +1,5 @@
 'use client';
-
-import ServiceWorkerRegister from './service-worker';
+import ServiceWorkerRegister from './ServiceWorkerRegister';
 
 export default function ClientRoot({ children }) {
   return (

@@ -13,7 +13,7 @@ const SurveyContainer = () => {
   survey.onComplete.add(async function (sender, options) {
     options.showSaveInProgress();
     const finishedSurvey = sender.data;
-    alert(JSON.stringify(finishedSurvey))
+   // alert(JSON.stringify(finishedSurvey))
 try {
   const response = await fetch('/api/results', {
     method: 'POST',

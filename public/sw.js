@@ -4,6 +4,7 @@ const URLS_TO_CACHE = [
   '/results',          // survey results page
   '/offline.html',     // fallback page
   '/fallback-image.png'
+  
 ];
 
 // STEP 1: Install and cache static files

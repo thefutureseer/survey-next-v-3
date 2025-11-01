@@ -60,7 +60,16 @@ const surveyJson = {
         {
           "type":"text",
           "name": "exercise ",
-          "title": "On a scale from 1-1000 how much do you know about exercise and nutrition?"
+          "title": "On a scale from 1-1000 how much do you know about exercise and nutrition?",
+          "inputType": "number",
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0,
+              "maxValue": 1000,
+              "text": "Rating must be a number between 0 and 1000."
+            }
+          ]
         },
         {
           "type": "comment",
@@ -74,22 +83,31 @@ const surveyJson = {
         },
         {
           "type":"boolean",
-          "name":"religion",
+          "name":"iskon?",
           "title": "Have you ever been to an ISKON temple?",
           "label": "Yes"
         },
         {
           "type": "radiogroup",
-          "name": "DatingPreference",
+          "name": "FancyRestaurantFrequency",
           "title": "(Preference/ money is no object) How often would you like to eat at expensive restaurants?",
           "choices": ["All the time (Most days per week)", "Once a week", "a few times a month", "Never"],
           "hasOther": true,
           "otherText": "Other (please specify)"
         },
         {
-          "type":"text",
-          "name":"mystics?",
-          "title": "From 1-1000 rate how much you like fortune tellers"
+          "type": "text",
+          "name": "fortuneTellers",
+          "title": "From 1-1000 rate how much you like fortune tellers",
+          "inputType": "number",
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0,
+              "maxValue": 1000,
+              "text": "Rating must be a number between 0 and 1000."
+            }
+          ]
         }
       ]
     }
